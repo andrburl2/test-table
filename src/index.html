@@ -4,10 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.scss">
-  <title>Test table</title>
+  <link rel="stylesheet" type="text/scss" href="./styles/index.scss">
+  <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-  <h1 class="title">Настраиваю webpack</h1>
+  <section class="section">
+
+
+    <table class="table">
+      <caption class="table__title">Пользователи</caption>
+
+      <tr class="table__row">
+        <th class="table__heading">Имя</th>
+        <th class="table__heading">Фото</th>
+        <th class="table__heading">Адрес</th>
+        <th class="table__heading">Email</th>
+        <th class="table__heading">Телефон</th>
+        <th class="table__heading">Дата регистарции</th>
+      </tr>
+    </table>
+  </section>
 </body>
 </html>
