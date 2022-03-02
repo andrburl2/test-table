@@ -1,18 +1,18 @@
 class TableRow {
-  constructor(fn) {
-    this.createTableCell = fn;
+  constructor(tableCellFn) {
+    this.createTableCell = tableCellFn;
   }
 
   create = (userData) => {
     const tr = document.createElement('tr');
     tr.classList.add('table__row');
 
-    this._insertCells(tr, userData);
+    this.insertCells(tr, userData);
 
     return tr;
   }
 
-  _insertCells(tr, data) {
+  insertCells(tr, data) {
     // перебираем data и за каждый элемент создаем TableCell с переданными данными
     data.forEach(el => {
       tr.append(this.createTableCell(el));

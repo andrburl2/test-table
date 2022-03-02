@@ -1,7 +1,10 @@
-@import url(./table.scss);
+@import './table';
+@import './filter';
+@import './loader';
 
-body {
+.body {
   width: 100%;
+  min-height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -13,4 +16,8 @@ body {
   padding: 20px;
   display: flex;
   box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
 }

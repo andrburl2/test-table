@@ -1,4 +1,4 @@
-const api = {
+const randomUserApi = {
   getUsers: async function() {
     const res = await fetch('https://randomuser.me/api/?results=15', {
       method: 'GET'
@@ -8,4 +8,4 @@ const api = {
   }
 };
 
-export default api;
+export default randomUserApi;

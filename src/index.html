@@ -7,22 +7,39 @@
   <link rel="stylesheet" type="text/scss" href="./styles/index.scss">
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
-<body>
-  <section class="section">
+<body class="body">
+  <section class="section table">
+    <h1 class="table__title">Пользователи</h1>
+
+    <form class="filter" name="filter">
+      <input class="filter__input" type="text" name="inputFilter" placeholder="Имя или фамилия">
+
+      <button class="filter__button" type="reset" disabled>Очистить</button>
+    </form>
 
 
-    <table class="table">
-      <caption class="table__title">Пользователи</caption>
+    <div class="table__window">
+      <table class="table__container">
+        <thead class="table__head">
+          <tr class="table__row">
+            <th class="table__heading">Имя</th>
+            <th class="table__heading">Фото</th>
+            <th class="table__heading">Адрес</th>
+            <th class="table__heading">Email</th>
+            <th class="table__heading">Телефон</th>
+            <th class="table__heading">Дата регистарции</th>
+          </tr>
+        </thead>
 
-      <tr class="table__row">
-        <th class="table__heading">Имя</th>
-        <th class="table__heading">Фото</th>
-        <th class="table__heading">Адрес</th>
-        <th class="table__heading">Email</th>
-        <th class="table__heading">Телефон</th>
-        <th class="table__heading">Дата регистарции</th>
-      </tr>
-    </table>
+        <tbody class="table__body"></tbody>
+      </table>
+
+      <p class="table__error"></p>
+    </div>
   </section>
+
+  <div class="loader">
+    <div class="loader__circle"></div>
+  </div>
 </body>
 </html>
