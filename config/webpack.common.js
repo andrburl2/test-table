@@ -24,26 +24,12 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|jpeg|gif|ico|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: './images/[name].[ext]',
-              esModule: false
-            }
-          },
-          {
-            loader: 'image-webpack-loader'
-          },
-        ]
+        test: /\.(png|jpg|jpeg|gif|ico)$/,
+        type: 'asset/resource'
       },
       {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader',
-        options: {
-          name: './fonts/[name].[ext]',
-        }
+        test: /\.(svg|eot|ttf|woff|woff2)$/,
+        type: 'asset/inline'
       }
     ],
   },
