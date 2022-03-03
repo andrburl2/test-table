@@ -37,14 +37,21 @@ class Filter {
       this.filter = event.target.value;
     }
 
+    // переключаем кнопку
     this.toggleButton();
     // передаем функцию фильтрации массива
     this.renderTable(this.filterArray);
   }
 
+  handleSubmit = (event) => {
+    // отменяем действие по умолчанию при submit формы
+    event.preventDefault();
+  }
+
   addEventListeners() {
     this.form.inputFilter.addEventListener('input', this.handleFilter);
     this.form.addEventListener('reset', this.handleFilter);
+    this.form.addEventListener('submit', this.handleSubmit);
   }
 }
 
